@@ -24,11 +24,6 @@ public class Hardware {
     private DcMotor backLeft = null;
     private DcMotor frontRight = null;
     private DcMotor backRight = null;
-    private DcMotor arm = null;
-    private Servo drone = null;
-   // private DcMotor hanger = null;
-
-
 
     // Define a constructor that allows the OpMode to pass a reference to itself.
     public Hardware (LinearOpMode opmode) {
@@ -36,17 +31,11 @@ public class Hardware {
     }
 
     public void init(){
-        drone = myOpMode.hardwareMap.get(Servo.class, "drone");
-        drone.setDirection(Servo.Direction.REVERSE);
-
         frontLeft = myOpMode.hardwareMap.get(DcMotor.class, "frontLeft");
         backLeft = myOpMode.hardwareMap.get(DcMotor.class, "backLeft");
         frontRight = myOpMode.hardwareMap.get(DcMotor.class, "frontRight");
         backRight = myOpMode.hardwareMap.get(DcMotor.class, "backRight");
-       // hanger = myOpMode.hardwareMap.get(DcMotor.class, "hanger");
-        //arm = myOpMode.hardwareMap.get(DcMotor.class, "arm");
 
-        // To drive forward, the motor on one side needs to be reversed because the axles point in opposite directions.
         frontLeft.setDirection(DcMotor.Direction.REVERSE);
         backLeft.setDirection(DcMotor.Direction.REVERSE);
 
