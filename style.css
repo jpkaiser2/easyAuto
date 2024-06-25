@@ -9,10 +9,12 @@
 
 .blue-box {
   background-color: royalblue;
+  border-radius: 20px;
 }
 
 .red-box {
   background-color: crimson;
+  border-radius: 20px;
 }
 
 table {
@@ -62,8 +64,7 @@ td {
 #field tr:nth-child(3n) td {
   border-bottom: 1px solid gray;
 }
-h1 {
-    color: lightgray;
-    font-family: Rubik;
-  }
-  
+h1,h2 {
+  color: lightgray;
+  font-family: Rubik;
+}
