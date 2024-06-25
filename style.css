@@ -1,13 +1,44 @@
 table {
-    border-collapse: collapse;
-    margin: 0 auto;
+  border-collapse: collapse;
+  margin: 0 auto;
 }
 td {
-    width: 100px;
-    height: 100px;
-    border: 1px solid #ddd;
-    text-align: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  text-align: center;
 }
 .selected {
-    background-color: lightblue;
+  background-color: lightblue;
+}
+#field {
+  border: 1px solid gray; /* table outline */
+}
+
+#field td {
+  border: 1px solid lightgray; /* cell outline */
+  padding: 0px; /* remove padding from cells */
+}
+
+/* target every 9th element (referencing table cells) with nth-child */
+#field td:nth-child(3n + 1) {
+  border-left: 1px solid gray; /* leftmost cell of the grid */
+}
+
+/* target every 9th element starting from the 2nd element (nth-child(9n+2)) */
+#field td:nth-child(3n + 2) {
+  border-left: 1px solid transparent; /* all cells except the first in the grid */
+}
+
+#field td:nth-child(n) {
+  border-top: 1px solid gray;
+}
+
+#field td:nth-child(3n) {
+  border-right: 1px solid gray; /* rightmost cell of the grid */
+}
+
+/* Target the bottom cell of every 3rd row using nth-child(3n) */
+#field tr:nth-child(3n) td {
+  border-bottom: 1px solid gray;
 }

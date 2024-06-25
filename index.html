@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Easy Auto for FTC</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <table id="field"></table>
 
     <script>
-        // Function to generate table with rows and columns
-        function generateTable(rows, cols) {
-            const table = document.getElementById('field');
-            
-            // Clear existing table content
-            table.innerHTML = "";
+      // Function to generate table with rows and columns
+      function generateTable(rows, cols) {
+        const table = document.getElementById("field");
 
-            for (let i = 0; i < rows; i++) {
-                const row = document.createElement('tr');
-                for (let j = 0; j < cols; j++) {
-                    const cell = document.createElement('td');
-                    cell.id = `cell-${i * cols + j + 1}`; // Calculate unique cell id
-                    row.appendChild(cell);
-                }
-                table.appendChild(row);
-            }
+        // Clear existing table content
+        table.innerHTML = "";
+
+        for (let i = 0; i < rows; i++) {
+          const row = document.createElement("tr");
+          for (let j = 0; j < cols; j++) {
+            const cell = document.createElement("td");
+            cell.id = `cell-${i * cols + j + 1}`; // Calculate unique cell id
+            row.appendChild(cell);
+          }
+          table.appendChild(row);
         }
+      }
 
-        // Generate a table
-        generateTable(6, 6);
+      // Generate a table
+      generateTable(18, 18);
 
-        // Get all table cells (after generation)
-        const cells = document.querySelectorAll('td');
+      // Get all table cells (after generation)
+      const cells = document.querySelectorAll("td");
 
-        // Loop through each cell and add click listener
-        cells.forEach(cell => {
-            cell.addEventListener('click', function() {
-                // Toggle selected class for visual indication
-                this.classList.toggle('selected');
-            });
+      // Loop through each cell and add click listener
+      cells.forEach((cell) => {
+        cell.addEventListener("click", function () {
+          // Toggle selected class for visual indication
+          this.classList.toggle("selected");
         });
+      });
     </script>
-</body>
+  </body>
 </html>
