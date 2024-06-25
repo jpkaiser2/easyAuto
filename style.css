@@ -1,16 +1,36 @@
+.container {
+  display: flex;
+}
+
+.side-box {
+  width: 365px;
+  height: 750px;
+}
+
+.blue-box {
+  background-color: royalblue;
+}
+
+.red-box {
+  background-color: crimson;
+}
+
 table {
   border-collapse: collapse;
   margin: 0 auto;
 }
+
 td {
   width: 40px;
   height: 40px;
   border: 1px solid #ddd;
   text-align: center;
 }
+
 .selected {
   background-color: lightblue;
 }
+
 #field {
   border: 1px solid gray; /* table outline */
 }
